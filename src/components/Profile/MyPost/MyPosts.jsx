@@ -5,7 +5,13 @@ import Post from "./Post/Post";
 let postData = [
     {id:0, massage:"Hi, how are you?", likesCount:3},
     {id:1, massage:"It's my first post", likesCount:7},
+    {id:1, massage:"It's my second post", likesCount:5},
+    {id:1, massage:"boom", likesCount:2},
+    {id:1, massage:"aaaaaaaa", likesCount:0},
 ]
+const posts = postData.map(post => {
+    return <Post id={post.id} massage={post.massage} likes={post.likesCount}/>
+})
 
 const MyPosts = () => {
     return (
@@ -23,8 +29,7 @@ const MyPosts = () => {
                 New post
             </div>
             <div className={set.newPosts}>
-                <Post id={postData[0].id} massage={postData[0].massage} likes={postData[0].likesCount}/>
-                <Post id={postData[1].id} massage={postData[1].massage} likes={postData[1].likesCount}/>
+                {posts}
             </div>
         </div>
     )
