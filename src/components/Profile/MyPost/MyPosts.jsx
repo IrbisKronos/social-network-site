@@ -9,19 +9,23 @@ debugger;
         return <Post id={postItem.id} message={postItem.message} likes={postItem.likesCount} />
     })
 
+    let newPostElement = React.createRef();
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        alert(text);
+    }
+
     return (
+
         <div className={set.myPosts}>
             <h3>My post:</h3>
             <div>
                 <div>
-                    <textarea></textarea>
+                    <textarea ref={newPostElement}></textarea>
                 </div>
                 <div>
-                    <button>Add post</button>
+                    <button onClick={addPost}>Add post</button>
                 </div>
-            </div>
-            <div>
-                New post
             </div>
             <div className={set.newPosts}>
                 {post}
