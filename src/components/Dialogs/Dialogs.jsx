@@ -5,10 +5,10 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
 
-    const dialogs = props.dialogsData.map( dia => {
+    let dialogs = props.state.dialogs.map( dia => {
         return <DialogItem id={dia.id} name={dia.name} />
     })
-    const messages = props.messagesData.map( mass => {
+    let messages = props.state.messages.map( mass => {
         return <Message id={mass.id} massageText={mass.massage} />
     })
 

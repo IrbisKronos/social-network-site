@@ -4,7 +4,7 @@ let rerenderEntireTree = () => {
 
 let state = {
     profilePage: {
-        postData: [
+        posts: [
             {id:0, message: "Hi, how are you?", likesCount:3},
             {id:1, message: "It's my first post", likesCount:7},
             {id:2, message: "It's my second post", likesCount:5},
@@ -14,7 +14,7 @@ let state = {
         newPostText: "it-kamasutra"
     },
     dialogsPage: {
-        dialogsData: [
+        dialogs: [
             {id: 0, name: "Niko"},
             {id: 1, name: "Kira"},
             {id: 2, name: "Stefan"},
@@ -22,7 +22,7 @@ let state = {
             {id: 4, name: "Mary"},
             {id: 5, name: "Josephine"},
         ],
-        messagesData: [
+        messages: [
             {id: 0, massage: "Hello, world"},
             {id: 1, massage: "Hi"},
             {id: 2, massage: "More details"},
